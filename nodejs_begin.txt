@@ -1,0 +1,32 @@
+1=> npm init 	: cấu hình file package.json
+	trong package.json, "scripts" thêm "start": "node file_name.js", chạy server => npm start
+2=> npm install express : cấu hình express file package-lock.json
+3=> npm install nodemon : tự động lắng nghe sự thay đổi của js để reset server và debug
+	trong package.json, "scripts" thêm "dev": "nodemon file_name", chạy server bằng nodemon => npm run dev
+
+4. Add code lên git repo:
+	tạo file .gitignore
+		.vscode
+		node_modules/
+
+5=> npm i morgan --s : Phần mềm trung gian ghi nhật ký yêu cầu HTTP cho node.js
+    app.use(morgan('combined')); / var logger = morgan('combined');
+
+6=> npm install dotenv --save : Lưu trữ cấu hình trong môi trường tách biệt với Code
+	require("dotenv").config();
+	create .env
+		set Ex :  PORT = 8080
+
+7. Cài template engine để chuyển html biên dịch thành file javascript
+=> npm i express-handlebars
+	const handlebars = require("express-handlebars");
+	app.engine("handlebars", handlebars());
+	app.set("view engine", "handlebars");
+	app.set("views", path.join(src/resources/views,"views");
+
+8. Su dung nhung file tinh nhu file image thi phai set thanh cac folder static
+	app.use(express.static(path.join(__dirname, "public"))); public la folder chua cac file can render ra.
+
+9=> npm i node-sass --save-dev : cai dat node-sass
+
+10. beautiful trong package.json de format lai cac file chu y " " de luu url cua file

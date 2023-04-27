@@ -1,0 +1,14 @@
+@import '_variable';
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: $set-color;
+}
+
+body {
+    margin: 40px;
+    text-align: center;
+}
